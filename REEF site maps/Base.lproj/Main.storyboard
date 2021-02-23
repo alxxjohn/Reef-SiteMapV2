@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MapViewController" customModule="Reef_Site_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MainView" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-LO-u88">
+                                <rect key="frame" x="16" y="43" width="342" height="734"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bub-Ex-KUY"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-7t-gSQ">
+                                <rect key="frame" x="0.0" y="43" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Launch Team Blue" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-ON-Je7">
+                                        <rect key="frame" x="35" y="0.0" width="103" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtField" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Site Code Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="od5-JS-tz4">
+                                        <rect key="frame" x="180" y="8" width="179" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="endEditing" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="deP-P4-pdN"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-GR-ccR" userLabel="BottomBar">
+                                <rect key="frame" x="0.0" y="735" width="375" height="77"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="grease" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dA-0W-gbP" userLabel="grease">
+                                        <rect key="frame" x="64" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="grease tank"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="greytank" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-7F-Pv2" userLabel="greytank">
+                                        <rect key="frame" x="112" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="grey water tank"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="power" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTw-7R-Luv" userLabel="power">
+                                        <rect key="frame" x="160" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="power"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="restroom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-Tv-lI5" userLabel="restroom">
+                                        <rect key="frame" x="202" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="restroom"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="water" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsU-BA-lhm" userLabel="water">
+                                        <rect key="frame" x="244" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="water"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="vessel" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-j7-b4e" userLabel="vessel">
+                                        <rect key="frame" x="286" y="11" width="67" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="Vessel"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ingres" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-59-Jzl" userLabel="ingres">
+                                        <rect key="frame" x="22" y="11" width="34" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" image="ingress egress"/>
+                                        <connections>
+                                            <action selector="ButtonDragEnt:forEvent:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="PJ3-BD-pXs"/>
+                                            <action selector="touched:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="5yM-ZS-jgR"/>
+                                            <outletCollection property="gestureRecognizers" destination="Seb-6F-Kwq" appends="YES" id="OL2-oj-9Ge"/>
+                                            <outletCollection property="gestureRecognizers" destination="Ogs-I2-3Xg" appends="YES" id="5un-p3-YN0"/>
+                                            <outletCollection property="gestureRecognizers" destination="Seb-6F-Kwq" appends="YES" id="d4z-SW-QZT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="aZr-Qj-7mH"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="compass" image="north_pink" translatesAutoresizingMaskIntoConstraints="NO" id="41I-Sg-8I9" userLabel="compass">
+                                <rect key="frame" x="288" y="101" width="61" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="compass">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vjD-qT-Pu9"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kOh-Ef-tyS"/>
+                    <connections>
+                        <outlet property="ObjectView" destination="XuG-Cn-kJf" id="8X6-yv-LXj"/>
+                        <outlet property="compasImage" destination="41I-Sg-8I9" id="DGP-fx-U06"/>
+                        <outlet property="mapView" destination="IgS-LO-u88" id="VA8-Ts-RWb"/>
+                        <outlet property="textField" destination="od5-JS-tz4" id="yaz-JT-Ib3"/>
+                        <outletCollection property="OBJECTS" destination="dOn-59-Jzl" collectionClass="NSMutableArray" id="IBv-P9-eyg"/>
+                        <outletCollection property="OBJECTS" destination="3dA-0W-gbP" collectionClass="NSMutableArray" id="WuK-Wy-3WB"/>
+                        <outletCollection property="OBJECTS" destination="XY7-7F-Pv2" collectionClass="NSMutableArray" id="ePm-gd-Lbd"/>
+                        <outletCollection property="OBJECTS" destination="cTw-7R-Luv" collectionClass="NSMutableArray" id="dD0-zs-unu"/>
+                        <outletCollection property="OBJECTS" destination="2Fb-Tv-lI5" collectionClass="NSMutableArray" id="BLS-Ro-w6B"/>
+                        <outletCollection property="OBJECTS" destination="PsU-BA-lhm" collectionClass="NSMutableArray" id="GUS-UN-ud9"/>
+                        <outletCollection property="OBJECTS" destination="Rri-j7-b4e" collectionClass="NSMutableArray" id="oZf-6t-p1b"/>
+                    </connections>
+                </viewController>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ogs-I2-3Xg" customClass="UIScreenEdgePanGestureRecognizer">
+                    <connections>
+                        <action selector="ObjectPan:" destination="BYZ-38-t0r" id="wmA-i5-nR2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="Aco-J9-fQD"/>
+                <view contentMode="scaleToFill" restorationIdentifier="ObjectView" id="XuG-Cn-kJf" userLabel="ObjectView">
+                    <rect key="frame" x="0.0" y="0.0" width="317" height="564"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="0ba-jK-sx5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <rotationGestureRecognizer id="Seb-6F-Kwq"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.399999999999999" y="19.95073891625616"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="Launch Team Blue" width="3104" height="1192"/>
+        <image name="Vessel" width="112" height="56"/>
+        <image name="grease tank" width="56" height="56"/>
+        <image name="grey water tank" width="56" height="56"/>
+        <image name="ingress egress" width="56" height="56"/>
+        <image name="north_pink" width="56" height="59"/>
+        <image name="power" width="56" height="56"/>
+        <image name="restroom" width="64" height="56"/>
+        <image name="water" width="56" height="56"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
