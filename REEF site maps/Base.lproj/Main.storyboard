@@ -34,6 +34,7 @@
                                     <color key="titleColor" red="0.0" green="0.1732847559" blue="0.48991871840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="CaptureImage:forEvent:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Vel-99-Zru"/>
                                     <segue destination="kad-8B-RBT" kind="show" id="oXz-jp-j71"/>
                                 </connections>
                             </button>
@@ -49,7 +50,6 @@
                         <outletCollection property="OBJECTS" destination="3dA-0W-gbP" collectionClass="NSMutableArray" id="WuK-Wy-3WB"/>
                         <outletCollection property="OBJECTS" destination="dOn-59-Jzl" collectionClass="NSMutableArray" id="IBv-P9-eyg"/>
                         <outletCollection property="OBJECTS" destination="PsU-BA-lhm" collectionClass="NSMutableArray" id="GUS-UN-ud9"/>
-                        <outletCollection property="OBJECTS" destination="Rri-j7-b4e" collectionClass="NSMutableArray" id="oZf-6t-p1b"/>
                         <outletCollection property="OBJECTS" destination="XY7-7F-Pv2" collectionClass="NSMutableArray" id="ePm-gd-Lbd"/>
                         <outletCollection property="OBJECTS" destination="cTw-7R-Luv" collectionClass="NSMutableArray" id="dD0-zs-unu"/>
                         <outletCollection property="OBJECTS" destination="2Fb-Tv-lI5" collectionClass="NSMutableArray" id="BLS-Ro-w6B"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="50.399999999999999" y="19.95073891625616"/>
         </scene>
-        <!--View Controller-->
+        <!--SiteMap-->
         <scene sceneID="hbL-Uu-0IN">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="kad-8B-RBT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SiteView" title="SiteMap" modalPresentationStyle="fullScreen" id="kad-8B-RBT" customClass="SiteMapViewController" customModule="Reef_Site_Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKT-pQ-Zcs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,9 @@
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
                                         <state key="normal" image="Vessel"/>
+                                        <connections>
+                                            <action selector="touched:forEvent:" destination="5dS-Um-jhF" eventType="touchDragEnter" id="O3D-sl-TGm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ingres" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-59-Jzl" userLabel="ingres">
                                         <rect key="frame" x="22" y="11" width="34" height="33"/>
@@ -191,6 +194,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
+                    <connections>
+                        <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dS-Um-jhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

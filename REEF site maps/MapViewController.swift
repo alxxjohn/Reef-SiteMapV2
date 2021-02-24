@@ -35,9 +35,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
 
             theAnimation.duration = 0.2
  
-    
+        typealias CompletionHandler = (MKMapSnapshotter.Snapshot?, Error?) -> Void
     }
+    @IBAction func CaptureImage(_ sender: UIButton, forEvent event: UIEvent) {
+        
+        typealias CompletionHandler = (MKMapSnapshotter.Snapshot?, Error?) -> Void
+        
 
+    }
+    
 // Objects motion
     @IBOutlet var ObjectView: UIView!
     @IBOutlet var OBJECTS: [UIButton]!

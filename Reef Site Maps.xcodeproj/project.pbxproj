@@ -16,6 +16,8 @@
 		7E6509D121B06864005D2B6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E61CF14215E20BC00EAD172 /* MapKit.framework */; };
 		F77FB50D2276FE70006F9FD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F77FB50C2276FE70006F9FD0 /* README.md */; };
 		FA5BAA3F25E46F8800945406 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5BAA3E25E46F8800945406 /* CoreImage.framework */; };
+		FA832E4025E6E231007810B1 /* MapSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA832E3F25E6E231007810B1 /* MapSnapshotter.swift */; };
+		FA832E4325E6E77F007810B1 /* SiteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA832E4225E6E77F007810B1 /* SiteMapViewController.swift */; };
 		FACC20D325E56EBF00E6C49A /* MapObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC20D225E56EBF00E6C49A /* MapObjects.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		7E61CF14215E20BC00EAD172 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F77FB50C2276FE70006F9FD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA5BAA3E25E46F8800945406 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		FA832E3F25E6E231007810B1 /* MapSnapshotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSnapshotter.swift; sourceTree = "<group>"; };
+		FA832E4225E6E77F007810B1 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapViewController.swift; sourceTree = "<group>"; };
 		FACC20D225E56EBF00E6C49A /* MapObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +75,9 @@
 			children = (
 				7E61CEFF215E1FF500EAD172 /* AppDelegate.swift */,
 				7E61CF01215E1FF500EAD172 /* MapViewController.swift */,
+				FA832E4225E6E77F007810B1 /* SiteMapViewController.swift */,
 				FACC20D225E56EBF00E6C49A /* MapObjects.swift */,
+				FA832E3F25E6E231007810B1 /* MapSnapshotter.swift */,
 				7E61CF08215E1FF600EAD172 /* LaunchScreen.storyboard */,
 				7E61CF03215E1FF500EAD172 /* Main.storyboard */,
 				7E61CF0B215E1FF600EAD172 /* Info.plist */,
@@ -166,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA832E4025E6E231007810B1 /* MapSnapshotter.swift in Sources */,
+				FA832E4325E6E77F007810B1 /* SiteMapViewController.swift in Sources */,
 				FACC20D325E56EBF00E6C49A /* MapObjects.swift in Sources */,
 				7E61CF02215E1FF500EAD172 /* MapViewController.swift in Sources */,
 				7E61CF00215E1FF500EAD172 /* AppDelegate.swift in Sources */,
