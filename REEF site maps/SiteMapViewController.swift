@@ -18,8 +18,7 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
         @IBOutlet weak var outerImgView: UIImageView!
         @IBOutlet weak var innerImgView: UIImageView!
         @IBOutlet weak var greasetank: UIImageView!
-
-    var panGesture  = UIPanGestureRecognizer()
+        var panGesture  = UIPanGestureRecognizer()
 
 
     @IBAction func scaleImg(_ sender: UIPinchGestureRecognizer) {
@@ -31,31 +30,63 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
                 view.addGestureRecognizer(tapGesture)
         
-        let gestureRecognizer = UITapGestureRecognizer(target:self , action: #selector(gestureFired(_:)))
-        gestureRecognizer.numberOfTapsRequired = 1
-        gestureRecognizer.numberOfTouchesRequired = 1
-        innerImgView.addGestureRecognizer(gestureRecognizer)
-        SiteMapImage.isUserInteractionEnabled = true
     }
     @IBAction func PanPerformed(_ sender: UIPanGestureRecognizer) {
         
         if sender.state == .began || sender.state == .changed{
-            let translation = sender.translation(in: self.view)
+            let translation = sender.translation(in: sender.view)
             let changeX = (sender.view?.center.x)! + translation.x
             let changeY = (sender.view?.center.y)! + translation.y
             
-            self.view.center = CGPoint(x: changeX, y: changeY)
-            sender.setTranslation(CGPoint.zero, in: self.view)
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    @objc func gestureFired(_ gester: UITapGestureRecognizer){
-        print("gesture")
-    }
-    @objc func dragImg(_ sender:UIPanGestureRecognizer){
-            let translation = sender.translation(in: self.view)
-            innerImgView.center = CGPoint(x: innerImgView.center.x + translation.x, y: innerImgView.center.y + translation.y)
-            sender.setTranslation(CGPoint.zero, in: self.view)
+        @IBOutlet var textField: UITextField!
+        @IBAction func EndText(_ sender: UITextField) {
+
+            func viewDidLoad() {
+                super.viewDidLoad()
+
+                textField.delegate = self
+
+            }
+            func textFieldShouldReturn(_ TextField: UITextField) -> Bool {
+                textField.resignFirstResponder()
+                return true
+            }
+            func textFieldShouldReturn(textField: UITextField) -> Bool {
+                textField.resignFirstResponder()
+                return true
+            }
+            func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+                self.view.endEditing(true)
+            }
+     }
+   
+}
+
+
+
+
+
+// OLD CODE FOR GESTURES
+
+//        let gestureRecognizer = UITapGestureRecognizer(target:self , action: #selector(gestureFired(_:)))
+//        gestureRecognizer.numberOfTapsRequired = 1
+//        gestureRecognizer.numberOfTouchesRequired = 1
+//        innerImgView.addGestureRecognizer(gestureRecognizer)
+//        SiteMapImage.isUserInteractionEnabled = true
+
+
+
+//    @objc func gestureFired(_ gester: UITapGestureRecognizer){
+//        print("gesture")
+//    }
+//    @objc func dragImg(_ sender:UIPanGestureRecognizer){
+//            let translation = sender.translation(in: self.view)
+//            innerImgView.center = CGPoint(x: innerImgView.center.x + translation.x, y: innerImgView.center.y + translation.y)
+//            sender.setTranslation(CGPoint.zero, in: self.view)
 
         
         
@@ -69,41 +100,4 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
     }
     */
 
-}
-    @IBOutlet var textField: UITextField!
-
-        @IBAction func EndText(_ sender: UITextField) {
-
-            func viewDidLoad() {
-                super.viewDidLoad()
-
-                textField.delegate = self
-
-            }
-
-            func textFieldShouldReturn(_ TextField: UITextField) -> Bool {
-                textField.resignFirstResponder()
-                return true
-            }
-
-            func textFieldShouldReturn(textField: UITextField) -> Bool {
-                textField.resignFirstResponder()
-                return true
-            }
-
-
-
-            func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-                self.view.endEditing(true)
-            }
-
-        
-
-     }
-
-    
-
-    
-    
-    
-}
+//}
