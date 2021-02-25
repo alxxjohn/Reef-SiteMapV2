@@ -95,7 +95,7 @@
         <scene sceneID="hbL-Uu-0IN">
             <objects>
                 <viewController storyboardIdentifier="SiteView" title="SiteMap" modalPresentationStyle="fullScreen" id="kad-8B-RBT" customClass="SiteMapViewController" customModule="Reef_Site_Maps" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hKT-pQ-Zcs">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="hKT-pQ-Zcs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -139,21 +139,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="MN1-ow-k7h"/>
+                                    <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="IGp-tF-gFm"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="greytank" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
                                 <rect key="frame" x="101" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2ns-rP-smi" appends="YES" id="gxX-re-G1I"/>
+                                    <outletCollection property="gestureRecognizers" destination="2ns-rP-smi" appends="YES" id="2gm-RQ-ZtX"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="vessel" image="Vessel" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
                                 <rect key="frame" x="146" y="740" width="53" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="n9Y-IK-JAI" appends="YES" id="FT3-t0-ewp"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="power" image="power" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-q9-eB4">
                                 <rect key="frame" x="207" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="power"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mci-p9-J9Z" appends="YES" id="XIQ-tP-SJG"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="water" image="water" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-o7-gMP">
                                 <rect key="frame" x="247" y="740" width="32" height="29"/>
@@ -172,7 +182,7 @@
                                 <rect key="frame" x="61" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="Mgf-IB-VBe"/>
+                                    <outletCollection property="gestureRecognizers" destination="8w1-3Y-MfL" appends="YES" id="E5X-hs-q3R"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -197,20 +207,43 @@
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
                     <connections>
                         <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
-                        <outlet property="greasetank" destination="5vW-kE-UfK" id="uUg-vf-WGc"/>
                         <outlet property="innerImgView" destination="1CY-2Q-2oy" id="Vm8-Bk-NiX"/>
                         <outlet property="outerImgView" destination="0sR-3F-6cG" id="cMG-DA-4Gw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dS-Um-jhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="n9Y-IK-JAI">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanVessel:" destination="kad-8B-RBT" id="uH9-z2-88Y"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="2ns-rP-smi">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanOil:" destination="kad-8B-RBT" id="qGc-pi-TJh"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8w1-3Y-MfL">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanDumpster:" destination="kad-8B-RBT" id="0fS-lI-mPQ"/>
+                    </connections>
+                </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="IU4-bb-MZC">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
-                        <action selector="PanPerformed:" destination="kad-8B-RBT" id="It0-kQ-DmW"/>
+                        <action selector="PanGrease:" destination="kad-8B-RBT" id="r78-5f-sQf"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Mci-p9-J9Z">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanPower:" destination="kad-8B-RBT" id="gZp-Tf-rus"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="878" y="83"/>
+            <point key="canvasLocation" x="877.60000000000002" y="82.758620689655174"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

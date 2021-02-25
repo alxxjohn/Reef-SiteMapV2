@@ -19,7 +19,7 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
         @IBOutlet weak var innerImgView: UIImageView!
         @IBOutlet weak var greasetank: UIImageView!
         var panGesture  = UIPanGestureRecognizer()
-
+       
 
     @IBAction func scaleImg(_ sender: UIPinchGestureRecognizer) {
      innerImgView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
@@ -31,7 +31,7 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
                 view.addGestureRecognizer(tapGesture)
         
     }
-    @IBAction func PanPerformed(_ sender: UIPanGestureRecognizer) {
+    @IBAction func PanGrease(_ sender: UIPanGestureRecognizer) {
         
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -42,6 +42,70 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
+    
+    @IBAction func PanDumpster(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
+    
+    @IBAction func PanOil(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
+    
+    @IBAction func PanVessel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
+    
+    
+    @IBAction func PanPower(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         @IBOutlet var textField: UITextField!
         @IBAction func EndText(_ sender: UITextField) {
 
