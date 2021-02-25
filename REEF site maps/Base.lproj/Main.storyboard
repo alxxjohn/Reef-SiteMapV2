@@ -143,31 +143,33 @@
                                     <outletCollection property="gestureRecognizers" destination="fvm-tt-TgU" appends="YES" id="OQw-JB-gep"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="greytank" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
                                 <rect key="frame" x="101" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vessel" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="vessel" image="Vessel" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
                                 <rect key="frame" x="146" y="740" width="53" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="power" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-q9-eB4">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="power" image="power" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-q9-eB4">
                                 <rect key="frame" x="207" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="power"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-o7-gMP">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="water" image="water" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-o7-gMP">
                                 <rect key="frame" x="247" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="water"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ingress egress" translatesAutoresizingMaskIntoConstraints="NO" id="k2P-RH-gcZ">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="egress" image="ingress egress" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2P-RH-gcZ">
                                 <rect key="frame" x="287" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restroom" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-FH-vjh">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="restroom" image="restroom" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-FH-vjh">
                                 <rect key="frame" x="327" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="dumpster" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy">
                                 <rect key="frame" x="61" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -203,14 +205,9 @@
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
                         <action selector="PanPerformed:" destination="kad-8B-RBT" id="WCb-b0-E9y"/>
-                        <outlet property="delegate" destination="5vW-kE-UfK" id="TMo-08-0Su"/>
                     </connections>
                 </panGestureRecognizer>
-                <pinchGestureRecognizer id="fvm-tt-TgU">
-                    <connections>
-                        <outlet property="delegate" destination="5vW-kE-UfK" id="1sz-OJ-jgV"/>
-                    </connections>
-                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="fvm-tt-TgU"/>
             </objects>
             <point key="canvasLocation" x="878" y="83"/>
         </scene>
