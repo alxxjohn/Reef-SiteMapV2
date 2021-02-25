@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     private let locationManager = CLLocationManager()
     
@@ -22,8 +22,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         locationManager.requestWhenInUseAuthorization()
         self.mapView.delegate = self
        
-    let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
+//    let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+//        view.addGestureRecognizer(tapGesture)
         
     let oldRad:Float = 1.259374
         let newRad:Float = 1.239832
@@ -69,36 +69,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     // Keyboard fixx
 
-@IBOutlet var textField: UITextField!
 
-    @IBAction func EndText(_ sender: UITextField) {
-
-        func viewDidLoad() {
-            super.viewDidLoad()
-
-            textField.delegate = self
-
-        }
-
-        func textFieldShouldReturn(_ TextField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
-
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
-
-
-
-        func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-            self.view.endEditing(true)
-        }
-
-    
-
- }
 
     
 

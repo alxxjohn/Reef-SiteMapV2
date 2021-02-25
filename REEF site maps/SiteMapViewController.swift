@@ -10,20 +10,24 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class SiteMapViewController: UIViewController {
+class SiteMapViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var SiteMapImage: UIImageView!
     @IBOutlet weak var outerImgView: UIImageView!
     @IBOutlet weak var innerImgView: UIImageView!
     @IBOutlet weak var greasetank: UIImageView!
     var panGesture  = UIPanGestureRecognizer()
-//
-//
+
+
     @IBAction func scaleImg(_ sender: UIPinchGestureRecognizer) {
      innerImgView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
         override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+                view.addGestureRecognizer(tapGesture)
+        
         let gestureRecognizer = UITapGestureRecognizer(target:self , action: #selector(gestureFired(_:)))
         gestureRecognizer.numberOfTapsRequired = 1
         gestureRecognizer.numberOfTouchesRequired = 1
@@ -51,5 +55,42 @@ class SiteMapViewController: UIViewController {
     */
 
 }
+    @IBOutlet var textField: UITextField!
 
+        @IBAction func EndText(_ sender: UITextField) {
+
+            func viewDidLoad() {
+                super.viewDidLoad()
+
+                textField.delegate = self
+
+            }
+
+            func textFieldShouldReturn(_ TextField: UITextField) -> Bool {
+                textField.resignFirstResponder()
+                return true
+            }
+
+            func textFieldShouldReturn(textField: UITextField) -> Bool {
+                textField.resignFirstResponder()
+                return true
+            }
+
+
+
+            func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+                self.view.endEditing(true)
+            }
+
+        
+
+     }
+
+    
+    
+    
+    
+    
+    
+    
 }

@@ -235,7 +235,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ParkJockey Miami, LLC";
+				CODE_SIGN_IDENTITY = "Developer ID Installer: alex john (29M7J7M43P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -297,7 +297,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ParkJockey Miami, LLC";
+				CODE_SIGN_IDENTITY = "Developer ID Installer: alex john (29M7J7M43P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -325,9 +325,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ParkJockey Miami, LLC";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V8282LL3UN;
+				DEVELOPMENT_TEAM = 29M7J7M43P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Reef Site Maps/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -346,8 +346,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ParkJockey Miami, LLC";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29M7J7M43P;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Reef Site Maps/Info.plist";
@@ -359,7 +359,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reef.launch-sitemaps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = sitemaptest;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
