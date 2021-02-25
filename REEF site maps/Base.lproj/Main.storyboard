@@ -26,21 +26,31 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bub-Ex-KUY"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppl-Ws-DMs">
-                                <rect key="frame" x="134" y="58" width="108" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppl-Ws-DMs">
+                                <rect key="frame" x="133" y="58" width="109" height="41.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ppl-Ws-DMs" secondAttribute="height" multiplier="108:41" id="SGc-r8-BBa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Continue ">
                                     <color key="titleColor" red="0.0" green="0.1732847559" blue="0.48991871840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="CaptureImage:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoH-M5-1sr"/>
                                     <action selector="CaptureImage:forEvent:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Vel-99-Zru"/>
+                                    <action selector="onClick:forEvent:" destination="JS3-Zs-DgM" eventType="touchUpInside" id="IHA-66-f8M"/>
                                     <segue destination="kad-8B-RBT" kind="show" id="oXz-jp-j71"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vjD-qT-Pu9"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vjD-qT-Pu9" firstAttribute="trailing" secondItem="Ppl-Ws-DMs" secondAttribute="trailing" constant="133" id="Xyj-rH-ee6"/>
+                            <constraint firstItem="Ppl-Ws-DMs" firstAttribute="top" secondItem="vjD-qT-Pu9" secondAttribute="top" constant="14" id="ikw-i8-HQD"/>
+                            <constraint firstItem="Ppl-Ws-DMs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qAo-yG-U0S"/>
+                            <constraint firstItem="Ppl-Ws-DMs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vjD-qT-Pu9" secondAttribute="leading" symbolic="YES" id="xRw-Rh-gD0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kOh-Ef-tyS"/>
                     <connections>
@@ -63,6 +73,7 @@
                 </view>
                 <rotationGestureRecognizer id="Seb-6F-Kwq"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="JS3-Zs-DgM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-529" y="101"/>
         </scene>
@@ -92,7 +103,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="deP-P4-pdN"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Team Blue" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
                                 <rect key="frame" x="16" y="106" width="343" height="630"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-GE-qyA">
@@ -109,9 +120,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="jGn-tj-AA0"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grease tank" translatesAutoresizingMaskIntoConstraints="NO" id="5vW-kE-UfK">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="greasetank" image="grease tank" translatesAutoresizingMaskIntoConstraints="NO" id="5vW-kE-UfK">
                                 <rect key="frame" x="16" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="MN1-ow-k7h"/>
+                                    <outletCollection property="gestureRecognizers" destination="fvm-tt-TgU" appends="YES" id="OQw-JB-gep"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
                                 <rect key="frame" x="101" y="740" width="32" height="29"/>
@@ -163,11 +179,25 @@
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
                     <connections>
                         <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
+                        <outlet property="greasetank" destination="5vW-kE-UfK" id="uUg-vf-WGc"/>
+                        <outlet property="innerImgView" destination="5vW-kE-UfK" id="qsu-07-kAh"/>
+                        <outlet property="outerImgView" destination="0sR-3F-6cG" id="cMG-DA-4Gw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dS-Um-jhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="IU4-bb-MZC">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="5vW-kE-UfK" id="TMo-08-0Su"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="fvm-tt-TgU">
+                    <connections>
+                        <outlet property="delegate" destination="5vW-kE-UfK" id="1sz-OJ-jgV"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="541.60000000000002" y="99.753694581280797"/>
+            <point key="canvasLocation" x="180" y="100"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

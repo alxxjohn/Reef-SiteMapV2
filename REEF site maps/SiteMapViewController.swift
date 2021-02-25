@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class SiteMapViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     @IBOutlet weak var SiteMapImage: UIImageView!
-    
+    @IBOutlet weak var outerImgView: UIImageView!
+    @IBOutlet weak var innerImgView: UIImageView!
+    @IBOutlet weak var greasetank: UIImageView!
+    var panGesture  = UIPanGestureRecognizer()
+//
+//
+    @IBAction func scaleImg(_ sender: UIPinchGestureRecognizer) {
+     innerImgView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+    }
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        let gestureRecognizer = UITapGestureRecognizer(target:self , action: #selector(gestureFired(_:)))
+        gestureRecognizer.numberOfTapsRequired = 1
+        gestureRecognizer.numberOfTouchesRequired = 1
+        innerImgView.addGestureRecognizer(gestureRecognizer)
+        SiteMapImage.isUserInteractionEnabled = true
+    }
+   @objc func gestureFired(_ gester: UITapGestureRecognizer){
+        print("gesture")
+    }
+    @objc func dragImg(_ sender:UIPanGestureRecognizer){
+            let translation = sender.translation(in: self.view)
+            innerImgView.center = CGPoint(x: innerImgView.center.x + translation.x, y: innerImgView.center.y + translation.y)
+            sender.setTranslation(CGPoint.zero, in: self.view)
+
+        
+        
     /*
     // MARK: - Navigation
 
@@ -27,5 +49,7 @@ class SiteMapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
 
 }
