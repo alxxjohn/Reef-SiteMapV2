@@ -47,12 +47,6 @@
                         <outlet property="ObjectView" destination="XuG-Cn-kJf" id="8X6-yv-LXj"/>
                         <outlet property="mapView" destination="IgS-LO-u88" id="VA8-Ts-RWb"/>
                         <outlet property="textField" destination="od5-JS-tz4" id="yaz-JT-Ib3"/>
-                        <outletCollection property="OBJECTS" destination="3dA-0W-gbP" collectionClass="NSMutableArray" id="WuK-Wy-3WB"/>
-                        <outletCollection property="OBJECTS" destination="dOn-59-Jzl" collectionClass="NSMutableArray" id="IBv-P9-eyg"/>
-                        <outletCollection property="OBJECTS" destination="PsU-BA-lhm" collectionClass="NSMutableArray" id="GUS-UN-ud9"/>
-                        <outletCollection property="OBJECTS" destination="XY7-7F-Pv2" collectionClass="NSMutableArray" id="ePm-gd-Lbd"/>
-                        <outletCollection property="OBJECTS" destination="cTw-7R-Luv" collectionClass="NSMutableArray" id="dD0-zs-unu"/>
-                        <outletCollection property="OBJECTS" destination="2Fb-Tv-lI5" collectionClass="NSMutableArray" id="BLS-Ro-w6B"/>
                     </connections>
                 </viewController>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Ogs-I2-3Xg" customClass="UIScreenEdgePanGestureRecognizer">
@@ -70,7 +64,7 @@
                 <rotationGestureRecognizer id="Seb-6F-Kwq"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.399999999999999" y="19.95073891625616"/>
+            <point key="canvasLocation" x="-529" y="101"/>
         </scene>
         <!--SiteMap-->
         <scene sceneID="hbL-Uu-0IN">
@@ -80,90 +74,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-GR-ccR" userLabel="BottomBar">
-                                <rect key="frame" x="0.0" y="735" width="375" height="77"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="grease" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dA-0W-gbP" userLabel="grease">
-                                        <rect key="frame" x="64" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="grease tank"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="greytank" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-7F-Pv2" userLabel="greytank">
-                                        <rect key="frame" x="112" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="grey water tank"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="power" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTw-7R-Luv" userLabel="power">
-                                        <rect key="frame" x="160" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="power"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="restroom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-Tv-lI5" userLabel="restroom">
-                                        <rect key="frame" x="202" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="restroom"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="water" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsU-BA-lhm" userLabel="water">
-                                        <rect key="frame" x="244" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="water"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="vessel" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-j7-b4e" userLabel="vessel">
-                                        <rect key="frame" x="286" y="11" width="67" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="Vessel"/>
-                                        <connections>
-                                            <action selector="touched:forEvent:" destination="5dS-Um-jhF" eventType="touchDragEnter" id="O3D-sl-TGm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ingres" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-59-Jzl" userLabel="ingres">
-                                        <rect key="frame" x="22" y="11" width="34" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <state key="normal" image="ingress egress"/>
-                                        <connections>
-                                            <action selector="ButtonDragEnt:forEvent:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="PJ3-BD-pXs"/>
-                                            <action selector="touched:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="5yM-ZS-jgR"/>
-                                            <outletCollection property="gestureRecognizers" destination="Seb-6F-Kwq" appends="YES" id="OL2-oj-9Ge"/>
-                                            <outletCollection property="gestureRecognizers" destination="Seb-6F-Kwq" appends="YES" id="d4z-SW-QZT"/>
-                                            <outletCollection property="gestureRecognizers" destination="Ogs-I2-3Xg" appends="YES" id="5un-p3-YN0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="aZr-Qj-7mH"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Launch Team Blue" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-ON-Je7">
-                                <rect key="frame" x="69" y="48" width="103" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Team Blue" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-ON-Je7">
+                                <rect key="frame" x="76" y="48" width="103" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="M28-wa-hej"/>
+                                </constraints>
                             </imageView>
-                            <textField multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtField" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Site Code Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="od5-JS-tz4">
-                                <rect key="frame" x="180" y="52" width="179" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" restorationIdentifier="txtField" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Site Code Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="od5-JS-tz4">
+                                <rect key="frame" x="187" y="52" width="172" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -174,13 +92,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="deP-P4-pdN"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
                                 <rect key="frame" x="16" y="106" width="343" height="630"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-GE-qyA">
-                                <rect key="frame" x="16" y="58" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-GE-qyA">
+                                <rect key="frame" x="16" y="58" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="23s-mL-uTW"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZKC-pu-LWD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.1732847559" blue="0.48991871840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -189,9 +109,56 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="jGn-tj-AA0"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grease tank" translatesAutoresizingMaskIntoConstraints="NO" id="5vW-kE-UfK">
+                                <rect key="frame" x="16" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
+                                <rect key="frame" x="101" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vessel" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
+                                <rect key="frame" x="146" y="740" width="53" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="power" translatesAutoresizingMaskIntoConstraints="NO" id="dv0-q9-eB4">
+                                <rect key="frame" x="207" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-o7-gMP">
+                                <rect key="frame" x="247" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ingress egress" translatesAutoresizingMaskIntoConstraints="NO" id="k2P-RH-gcZ">
+                                <rect key="frame" x="287" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restroom" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-FH-vjh">
+                                <rect key="frame" x="327" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy">
+                                <rect key="frame" x="61" y="740" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Io0-fr-IpD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uvi-GE-qyA" firstAttribute="leading" secondItem="hKT-pQ-Zcs" secondAttribute="leadingMargin" id="A15-Jm-77m"/>
+                            <constraint firstItem="uvi-GE-qyA" firstAttribute="centerY" secondItem="d8T-ON-Je7" secondAttribute="centerY" id="CxK-mt-89S"/>
+                            <constraint firstItem="uvi-GE-qyA" firstAttribute="leading" secondItem="0sR-3F-6cG" secondAttribute="leading" id="FCN-Z1-99I"/>
+                            <constraint firstItem="uvi-GE-qyA" firstAttribute="top" secondItem="Io0-fr-IpD" secondAttribute="top" constant="14" id="Hpm-Iy-tkb"/>
+                            <constraint firstItem="Io0-fr-IpD" firstAttribute="bottom" secondItem="0sR-3F-6cG" secondAttribute="bottom" constant="42" id="NPE-nD-GMQ"/>
+                            <constraint firstItem="d8T-ON-Je7" firstAttribute="leading" secondItem="uvi-GE-qyA" secondAttribute="trailing" constant="16" id="PtX-u5-rD4"/>
+                            <constraint firstItem="d8T-ON-Je7" firstAttribute="top" secondItem="Io0-fr-IpD" secondAttribute="top" constant="4" id="QaX-xW-uOI"/>
+                            <constraint firstItem="0sR-3F-6cG" firstAttribute="top" secondItem="d8T-ON-Je7" secondAttribute="bottom" constant="8" id="U8v-C5-ATj"/>
+                            <constraint firstItem="od5-JS-tz4" firstAttribute="leading" secondItem="d8T-ON-Je7" secondAttribute="trailing" constant="8" id="eQF-NG-S4B"/>
+                            <constraint firstItem="od5-JS-tz4" firstAttribute="trailing" secondItem="hKT-pQ-Zcs" secondAttribute="trailingMargin" id="q6y-HK-yOd"/>
+                            <constraint firstItem="od5-JS-tz4" firstAttribute="trailing" secondItem="0sR-3F-6cG" secondAttribute="trailing" id="wOu-kl-VmH"/>
+                            <constraint firstItem="od5-JS-tz4" firstAttribute="top" secondItem="Io0-fr-IpD" secondAttribute="top" constant="8" id="xPd-lV-TGn"/>
+                            <constraint firstItem="d8T-ON-Je7" firstAttribute="centerY" secondItem="od5-JS-tz4" secondAttribute="centerY" id="zyX-8f-khl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
                     <connections>
@@ -200,13 +167,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dS-Um-jhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="19.95073891625616"/>
+            <point key="canvasLocation" x="541.60000000000002" y="99.753694581280797"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Launch Team Blue" width="3104" height="1192"/>
         <image name="Vessel" width="112" height="56"/>
+        <image name="dumpster" width="56" height="56"/>
         <image name="grease tank" width="56" height="56"/>
         <image name="grey water tank" width="56" height="56"/>
         <image name="ingress egress" width="56" height="56"/>
