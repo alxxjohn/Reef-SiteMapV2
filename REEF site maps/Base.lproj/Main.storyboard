@@ -146,8 +146,7 @@
                                 <rect key="frame" x="101" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2ns-rP-smi" appends="YES" id="gxX-re-G1I"/>
-                                    <outletCollection property="gestureRecognizers" destination="2ns-rP-smi" appends="YES" id="2gm-RQ-ZtX"/>
+                                    <outletCollection property="gestureRecognizers" destination="2ns-rP-smi" appends="YES" id="jxX-2P-yna"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="vessel" image="Vessel" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
@@ -169,16 +168,25 @@
                                 <rect key="frame" x="247" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="water"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uq2-A6-uwG" appends="YES" id="rGe-QK-I6y"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="egress" image="ingress egress" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2P-RH-gcZ">
                                 <rect key="frame" x="287" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fep-CT-wGg" appends="YES" id="uak-As-d98"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="restroom" image="restroom" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-FH-vjh">
                                 <rect key="frame" x="327" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3YN-SU-McT" appends="YES" id="BIo-IM-UNp"/>
+                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="dumpster" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="dumpster" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy" userLabel="dumpster">
                                 <rect key="frame" x="61" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -207,43 +215,60 @@
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
                     <connections>
                         <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
-                        <outlet property="innerImgView" destination="1CY-2Q-2oy" id="Vm8-Bk-NiX"/>
                         <outlet property="outerImgView" destination="0sR-3F-6cG" id="cMG-DA-4Gw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dS-Um-jhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="n9Y-IK-JAI">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="n9Y-IK-JAI" userLabel="PanVessel">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
                         <action selector="PanVessel:" destination="kad-8B-RBT" id="uH9-z2-88Y"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="2ns-rP-smi">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="2ns-rP-smi" userLabel="PanGrey">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
-                        <action selector="PanOil:" destination="kad-8B-RBT" id="qGc-pi-TJh"/>
+                        <action selector="PanGrey:" destination="kad-8B-RBT" id="mL7-9S-WlB"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="8w1-3Y-MfL">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8w1-3Y-MfL" userLabel="PanDumpster">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
                         <action selector="PanDumpster:" destination="kad-8B-RBT" id="0fS-lI-mPQ"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="IU4-bb-MZC">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="IU4-bb-MZC" userLabel="PanGrease">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
                         <action selector="PanGrease:" destination="kad-8B-RBT" id="r78-5f-sQf"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Mci-p9-J9Z">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Mci-p9-J9Z" userLabel="PanPower">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
                         <action selector="PanPower:" destination="kad-8B-RBT" id="gZp-Tf-rus"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uq2-A6-uwG" userLabel="PanWater">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanWater:" destination="kad-8B-RBT" id="8JW-d8-Lh9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fep-CT-wGg" userLabel="PanEgress">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanEgres:" destination="kad-8B-RBT" id="fBe-EW-sbQ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3YN-SU-McT" userLabel="PanRestroom">
+                    <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
+                    <connections>
+                        <action selector="PanRestroom:" destination="kad-8B-RBT" id="XmK-Ci-aY0"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="877.60000000000002" y="82.758620689655174"/>
+            <point key="canvasLocation" x="817" y="202"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -54,7 +54,8 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    @IBAction func PanOil(_ sender: UIPanGestureRecognizer) {
+    
+    @IBAction func PanGrey(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
             let changeX = (sender.view?.center.x)! + translation.x
@@ -89,11 +90,41 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
     }
     
     
+    @IBAction func PanWater(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
     
     
     
+    @IBAction func PanEgres(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }
+    }
     
     
+    @IBAction func PanRestroom(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: sender.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            sender.view?.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: sender.view)
+        }  
+    }
     
     
     
