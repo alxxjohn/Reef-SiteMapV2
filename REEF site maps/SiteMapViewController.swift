@@ -11,16 +11,11 @@ import MapKit
 import CoreLocation
 
 class SiteMapViewController: UIViewController,UITextFieldDelegate {
-   
-    
-
         @IBOutlet weak var SiteMapImage: UIImageView!
         @IBOutlet weak var outerImgView: UIImageView!
         @IBOutlet weak var innerImgView: UIImageView!
         @IBOutlet weak var greasetank: UIImageView!
         var panGesture  = UIPanGestureRecognizer()
-       
-
     @IBAction func scaleImg(_ sender: UIPinchGestureRecognizer) {
      innerImgView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
@@ -53,8 +48,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    
     @IBAction func PanGrey(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -65,7 +58,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
     @IBAction func PanVessel(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -76,8 +68,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    
     @IBAction func PanPower(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -88,8 +78,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    
     @IBAction func PanWater(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -100,9 +88,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    
-    
     @IBAction func PanEgres(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -113,8 +98,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
     }
-    
-    
     @IBAction func PanRestroom(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began || sender.state == .changed{
             let translation = sender.translation(in: sender.view)
@@ -123,19 +106,63 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
             
             sender.view?.center = CGPoint(x: changeX, y: changeY)
             sender.setTranslation(CGPoint.zero, in: sender.view)
-        }  
+        }
+    }
+    @IBAction func PinchVessel(_ sender: UIPinchGestureRecognizer) {
+        if let recognizerView = sender.view {
+            recognizerView.transform = recognizerView.transform.rotated(by: sender.scale)
+            sender.scale = 0
+
+            let radians:Double = atan2( Double(recognizerView.transform.b), Double(recognizerView.transform.a))
+            let degrees = radians * Double((180 / Float.pi))
+
+            if sender.state == .ended || sender.state == .cancelled {
+            var degreeToScale:CGFloat = 0
+
+                switch degrees {
+                case -45...45:
+                    print("the default value 0, no need to any assign...")
+                case 46...135:
+                    degreeToScale = CGFloat(Double.pi/2)
+                case 136...180, -180 ... -136:
+                    degreeToScale = CGFloat(Double.pi)
+                case -135 ... -46:
+                    degreeToScale = CGFloat(-Double.pi/2)
+                default:
+                    print("!")
+                }
+
+    }
+  }
+}
+    @IBAction func RotVessel(_ sender: UIRotationGestureRecognizer) {
+        if let recognizerView = sender.view {
+            recognizerView.transform = recognizerView.transform.rotated(by: sender.rotation)
+            sender.rotation = 0
+
+            let radians:Double = atan2( Double(recognizerView.transform.b), Double(recognizerView.transform.a))
+            let degrees = radians * Double((180 / Float.pi))
+
+            if sender.state == .ended || sender.state == .cancelled {
+            var degreeToAnimate:CGFloat = 0
+
+                switch degrees {
+                case -45...45:
+                    print("the default value 0, no need to any assign...")
+                case 46...135:
+                    degreeToAnimate = CGFloat(Double.pi/2)
+                case 136...180, -180 ... -136:
+                    degreeToAnimate = CGFloat(Double.pi)
+                case -135 ... -46:
+                    degreeToAnimate = CGFloat(-Double.pi/2)
+                default:
+                    print("!")
+                }
+            
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ }
+}
     
         @IBOutlet var textField: UITextField!
         @IBAction func EndText(_ sender: UITextField) {
@@ -160,10 +187,6 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
      }
    
 }
-
-
-
-
 
 // OLD CODE FOR GESTURES
 
