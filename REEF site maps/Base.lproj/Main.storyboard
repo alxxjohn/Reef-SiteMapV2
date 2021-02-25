@@ -117,7 +117,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="deP-P4-pdN"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Team Blue" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-3F-6cG">
                                 <rect key="frame" x="16" y="106" width="343" height="630"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-GE-qyA">
@@ -140,7 +140,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="MN1-ow-k7h"/>
-                                    <outletCollection property="gestureRecognizers" destination="fvm-tt-TgU" appends="YES" id="OQw-JB-gep"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="greytank" image="grey water tank" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-in-8lB">
@@ -172,6 +171,9 @@
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="dumpster" image="dumpster" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-2Q-2oy">
                                 <rect key="frame" x="61" y="740" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IU4-bb-MZC" appends="YES" id="Mgf-IB-VBe"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Io0-fr-IpD"/>
@@ -196,7 +198,7 @@
                     <connections>
                         <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
                         <outlet property="greasetank" destination="5vW-kE-UfK" id="uUg-vf-WGc"/>
-                        <outlet property="innerImgView" destination="5vW-kE-UfK" id="qsu-07-kAh"/>
+                        <outlet property="innerImgView" destination="1CY-2Q-2oy" id="Vm8-Bk-NiX"/>
                         <outlet property="outerImgView" destination="0sR-3F-6cG" id="cMG-DA-4Gw"/>
                     </connections>
                 </viewController>
@@ -204,10 +206,9 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="IU4-bb-MZC">
                     <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
                     <connections>
-                        <action selector="PanPerformed:" destination="kad-8B-RBT" id="WCb-b0-E9y"/>
+                        <action selector="PanPerformed:" destination="kad-8B-RBT" id="It0-kQ-DmW"/>
                     </connections>
                 </panGestureRecognizer>
-                <pinchGestureRecognizer id="fvm-tt-TgU"/>
             </objects>
             <point key="canvasLocation" x="878" y="83"/>
         </scene>
