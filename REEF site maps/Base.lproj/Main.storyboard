@@ -152,6 +152,9 @@
                             </imageView>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="vessel" image="Vessel" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-cW-hgX">
                                 <rect key="frame" x="125" y="738" width="94" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="n9Y-IK-JAI" appends="YES" id="FT3-t0-ewp"/>
                                     <outletCollection property="gestureRecognizers" destination="rcP-VD-O9z" appends="YES" id="HGX-mk-VrD"/>
@@ -252,6 +255,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qh7-q4-gXC"/>
                     <connections>
+                        <outlet property="MapCapture" destination="0sR-3F-6cG" id="Mrn-00-B5Q"/>
                         <outlet property="SiteMapImage" destination="0sR-3F-6cG" id="1F7-Hr-YBw"/>
                         <outlet property="outerImgView" destination="0sR-3F-6cG" id="cMG-DA-4Gw"/>
                     </connections>
@@ -307,12 +311,12 @@
                 </panGestureRecognizer>
                 <rotationGestureRecognizer id="rcP-VD-O9z" userLabel="RotVessel">
                     <connections>
-                        <action selector="RotVessel:" destination="kad-8B-RBT" id="vwm-nW-5XJ"/>
+                        <action selector="RotVessel:" destination="kad-8B-RBT" id="OQP-3s-biY"/>
                     </connections>
                 </rotationGestureRecognizer>
                 <pinchGestureRecognizer id="x5u-gM-6SS" userLabel="PinchVessel">
                     <connections>
-                        <action selector="PinchVessel:" destination="kad-8B-RBT" id="ukc-LO-0bP"/>
+                        <action selector="PinchVessel:" destination="kad-8B-RBT" id="Tpb-Gv-kVi"/>
                     </connections>
                 </pinchGestureRecognizer>
             </objects>

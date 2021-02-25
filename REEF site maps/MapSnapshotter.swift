@@ -31,6 +31,9 @@ class MapSnapshotter: MapViewController {
     func start(completionHandler: @escaping MKMapSnapshotter.CompletionHandler)
     {
         
+        
+        
+        
     }
     
     

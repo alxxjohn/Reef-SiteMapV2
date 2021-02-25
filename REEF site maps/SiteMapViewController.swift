@@ -185,7 +185,8 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
                 self.view.endEditing(true)
             }
      }
-   
+    @IBOutlet weak var MapCapture: UIImageView!
+    
 }
 
 // OLD CODE FOR GESTURES
