@@ -11,11 +11,14 @@ import MapKit
 import CoreLocation
 
 class SiteMapViewController: UIViewController,UITextFieldDelegate {
+   
     
-    @IBOutlet weak var SiteMapImage: UIImageView!
-    @IBOutlet weak var outerImgView: UIImageView!
-    @IBOutlet weak var innerImgView: UIImageView!
-    @IBOutlet weak var greasetank: UIImageView!
+
+        @IBOutlet weak var SiteMapImage: UIImageView!
+        @IBOutlet weak var outerImgView: UIImageView!
+        @IBOutlet weak var innerImgView: UIImageView!
+        @IBOutlet weak var greasetank: UIImageView!
+
     var panGesture  = UIPanGestureRecognizer()
 
 
@@ -34,7 +37,19 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
         innerImgView.addGestureRecognizer(gestureRecognizer)
         SiteMapImage.isUserInteractionEnabled = true
     }
-   @objc func gestureFired(_ gester: UITapGestureRecognizer){
+    @IBAction func PanPerformed(_ sender: UIPanGestureRecognizer) {
+        
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: self.view)
+            let changeX = (sender.view?.center.x)! + translation.x
+            let changeY = (sender.view?.center.y)! + translation.y
+            
+            self.view.center = CGPoint(x: changeX, y: changeY)
+            sender.setTranslation(CGPoint.zero, in: self.view)
+        }
+    }
+    
+    @objc func gestureFired(_ gester: UITapGestureRecognizer){
         print("gesture")
     }
     @objc func dragImg(_ sender:UIPanGestureRecognizer){
@@ -87,9 +102,7 @@ class SiteMapViewController: UIViewController,UITextFieldDelegate {
      }
 
     
-    
-    
-    
+
     
     
     

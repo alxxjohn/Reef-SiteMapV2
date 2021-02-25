@@ -34,7 +34,7 @@
 		F77FB50C2276FE70006F9FD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA5BAA3E25E46F8800945406 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		FA832E3F25E6E231007810B1 /* MapSnapshotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSnapshotter.swift; sourceTree = "<group>"; };
-		FA832E4225E6E77F007810B1 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapViewController.swift; sourceTree = "<group>"; };
+		FA832E4225E6E77F007810B1 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SiteMapViewController.swift; path = "REEF site maps/SiteMapViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FACC20D225E56EBF00E6C49A /* MapObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
